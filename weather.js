@@ -8,7 +8,10 @@ var temp = document.querySelector('#temp')
 
 btn.addEventListener('click', ()=>{
   if(city.value){
-    fetch('http://api.openweathermap.org/data/2.5/weather?q=' + city.value +'&appid=43cf8eb4bd5a244c489d23c34248fdd9' )
+    fetch('http://api.openweathermap.org/data/2.5/weather?q=' + city.value +'&appid=43cf8eb4bd5a244c489d23c34248fdd9',
+    {
+      method:'GET',
+    })
     .then((response)=> {     
       return response.json();      
     })
